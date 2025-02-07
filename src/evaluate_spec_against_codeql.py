@@ -13,7 +13,7 @@ sys.path.append(NEUROSYMSA_ROOT_DIR)
 from src.config import CODEQL_DIR, OUTPUT_DIR
 from src.queries import QUERIES
 
-YAML_DIR = f"{CODEQL_DIR}/qlpacks/codeql/java-all/0.8.3/ext"
+YAML_DIR = f"{CODEQL_DIR}/qlpacks/codeql/java-all/0.8.6/ext"
 
 SINK_KIND = {
   "022": ["path-injection"],

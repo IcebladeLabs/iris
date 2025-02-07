@@ -45,7 +45,7 @@ def setup_environment(row, java_env_path):
         java_home = os.path.abspath(os.path.join(java_env_path, f"jdk1.{main_ver}.0_{java_version.split('u')[1]}"))
     else: 
         java_home = os.path.abspath(os.path.join(java_env_path, f"jdk-{java_version}"))
-    
+    java_home="/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/"
     verify_java_installation(java_home)
     env['JAVA_HOME'] = java_home
     print(f"JAVA_HOME set to: {java_home}")
@@ -75,7 +75,7 @@ def create_codeql_database(project_slug, env, db_base_path, sources_base_path):
     Path(database_path).parent.mkdir(parents=True, exist_ok=True)
     
     command = [
-        "codeql", "database", "create",
+        "/Users/saikat/projects/codeql/codeql", "database", "create",
         database_path,
         "--source-root", source_path,
         "--language", "java",

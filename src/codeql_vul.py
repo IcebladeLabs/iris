@@ -108,7 +108,7 @@ class CodeQLSAPipeline:
             "analyze",
             self.project_codeql_db_path,
             f"--output={self.query_output_result_sarif_path}",
-            f"{CODEQL_DIR}/qlpacks/codeql/java-queries/0.8.3/{exp}Security/CWE/CWE-{self.cwe_id}/"
+            f"{CODEQL_DIR}/qlpacks/codeql/java-queries/0.8.6/{exp}Security/CWE/CWE-{self.cwe_id}/"
         ]
 
         if self.overwrite:

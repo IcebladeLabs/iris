@@ -30,7 +30,7 @@ class LLM:
             exit(1)
 
         # nothing else needed if calling gpt
-        if model_name.lower().startswith("gpt"):
+        if model_name.lower().startswith("gpt") or model_name.lower().startswith("gemini"):
             return
         # nothing else needed if calling together AI
         elif "-tai" in model_name.lower():
@@ -240,6 +240,9 @@ class LLM:
         elif model_name.lower().startswith("qwen"):
             from models.qwen import QwenModel
             model=QwenModel(model_name=model_name, logger=logger, **kwargs)
+        elif model_name.lower().startswith("gemini"):
+            from models.gemini import GeminiModel
+            model=GeminiModel(model_name=model_name, logger=logger, **kwargs)
         else:
             logger.log(model_name + " not implemented")
             exit(1)

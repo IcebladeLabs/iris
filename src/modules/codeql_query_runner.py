@@ -15,7 +15,7 @@ from src.config import CODEQL_DIR
 from src.queries import QUERIES
 
 CODEQL = f"{CODEQL_DIR}/codeql"
-CODEQL_CUSTOM_QUERY_DIR = f"{CODEQL_DIR}/qlpacks/codeql/java-queries/0.8.3/myqueries"
+CODEQL_CUSTOM_QUERY_DIR = f"{CODEQL_DIR}/qlpacks/codeql/java-queries/0.8.6/myqueries"
 
 ENTRY_SCRIPT_DIR = os.path.abspath(os.path.dirname(os.path.realpath(__file__)) + "/../")
 

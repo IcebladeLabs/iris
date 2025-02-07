@@ -14,7 +14,7 @@ import random
 from src.config import CODEQL_DIR 
 
 CODEQL = f"{CODEQL_DIR}/codeql"
-CODEQL_CUSTOM_QUERY_DIR = f"{CODEQL_DIR}/qlpacks/codeql/java-queries/0.8.3/myqueries"
+CODEQL_CUSTOM_QUERY_DIR = f"{CODEQL_DIR}/qlpacks/codeql/java-queries/0.8.6/myqueries"
 
 class CWEQueryResultPostprocessor:
     def __init__(self):
